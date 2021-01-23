@@ -88,7 +88,7 @@ public class TeleOp extends LinearOpMode {
             if (gamepad1.y) {
                 // Move arm Down
                 //Stops  when we hit ground or deployed limit
-                if(arm.getCurrentPosition()>DEPLOYED) {
+                if(arm.getCurrentPosition()<DEPLOYED) {
                     arm.setPower(0);
                 }
                 else{
